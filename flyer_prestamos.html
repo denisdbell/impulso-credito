@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 210mm; height: 297mm;
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    color: #1c2a44;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm; height: 297mm;
+    padding: 12mm 12mm 10mm 12mm;
+    display: flex; flex-direction: column;
+    background: #ffffff;
+  }
+
+  /* ---------- Encabezado ---------- */
+  .header {
+    background: #ffffff;
+    border: 3px solid #1c4587;
+    border-radius: 22px;
+    padding: 16px 26px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 0 #dbe4f3;
+  }
+  .header img { height: 96px; width: auto; display: block; }
+
+  .intro {
+    text-align: center;
+    font-size: 17px; font-weight: 700; color: #1c4587;
+    margin: 14px 4px 12px;
+  }
+
+  /* ---------- Título de sección ---------- */
+  .sec-title {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 20px; font-weight: 900; color: #1c4587;
+    margin: 4px 0 12px;
+  }
+  .sec-title .dot {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: #e8a33d; color:#fff; font-size:16px;
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  /* ---------- Tarjetas de préstamo ---------- */
+  .cards { display: flex; gap: 12px; }
+  .card {
+    flex: 1;
+    border: 3px solid #1c4587;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    display: flex; flex-direction: column;
+  }
+  .card .top {
+    background: #1c4587; color: #fff;
+    padding: 10px 6px;
+  }
+  .card .emoji { font-size: 34px; }
+  .card .name { font-size: 17px; font-weight: 800; margin-top: 2px; }
+  .card .plazo { font-size: 13px; color: #ffe6bd; }
+  .card .body { padding: 12px 8px 14px; background: #f3f7ff; flex:1; }
+  .card .pct {
+    font-size: 40px; font-weight: 900; color: #e8a33d; line-height: 1;
+  }
+  .card .pct-label { font-size: 12px; color:#556; font-weight:700; margin-top:2px; }
+  .card .example {
+    margin-top: 10px; font-size: 12.5px; color:#1c2a44;
+    background:#fff; border:2px dashed #b9cbe8; border-radius:12px;
+    padding: 8px 6px; line-height:1.35;
+  }
+  .card .example b { color:#1c4587; }
+
+  /* ---------- Caja de mora ---------- */
+  .late {
+    margin-top: 16px;
+    background: #fff4e2;
+    border: 3px solid #e8a33d;
+    border-radius: 18px;
+    padding: 14px 18px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .late .big {
+    flex: 0 0 auto;
+    background: #e8a33d; color:#fff;
+    border-radius: 14px;
+    padding: 10px 16px; text-align:center;
+  }
+  .late .big .n { font-size: 40px; font-weight: 900; line-height:1; }
+  .late .big .u { font-size: 13px; font-weight:700; }
+  .late .txt h3 { font-size: 18px; color:#b96b00; }
+  .late .txt p { font-size: 14px; margin-top:4px; color:#5a4326; line-height:1.4; }
+  .late .txt .warn { font-weight:800; color:#c0392b; }
+
+  /* ---------- Regla simple / ejemplo mora ---------- */
+  .strip {
+    margin-top: 14px;
+    display:flex; gap:12px;
+  }
+  .strip .box {
+    flex:1; border-radius:14px; padding:12px 14px;
+    background:#f3f7ff; border:2px solid #cddcf3;
+  }
+  .strip .box h4 { font-size:14px; color:#1c4587; display:flex; gap:8px; align-items:center; }
+  .strip .box p { font-size:13px; margin-top:6px; color:#33415c; line-height:1.45; }
+
+  /* ---------- Pie ---------- */
+  .footer {
+    margin-top: auto;
+    text-align:center;
+    padding-top: 14px;
+    border-top: 3px dotted #b9cbe8;
+  }
+  .footer .tag { font-size: 18px; font-weight:900; color:#1c4587; }
+  .footer .contact { font-size: 15px; font-weight:800; color:#e8a33d; margin-top:5px; }
+  .footer .sub { font-size: 12px; color:#7a869c; margin-top:5px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <img src="impulso_credito_logo.png" alt="Impulso Crédito — Préstamos rápidos y confiables">
+  </div>
+
+  <div class="sec-title"><span class="dot">1</span> Tipos de préstamo</div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="top">
+        <div class="emoji">🐇</div>
+        <div class="name">Rapidito</div>
+        <div class="plazo">15 días</div>
+      </div>
+      <div class="body">
+        <div class="pct">25%</div>
+        <div class="pct-label">de interés</div>
+        <div class="example">Pedís <b>$1.000</b><br>Devolvés <b>$1.250</b></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <div class="emoji">🐢</div>
+        <div class="name">Mediano</div>
+        <div class="plazo">1 mes</div>
+      </div>
+      <div class="body">
+        <div class="pct">50%</div>
+        <div class="pct-label">de interés</div>
+        <div class="example">Pedís <b>$1.000</b><br>Devolvés <b>$1.500</b></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <div class="emoji">🐘</div>
+        <div class="name">Largo</div>
+        <div class="plazo">2 meses</div>
+      </div>
+      <div class="body">
+        <div class="pct">100%</div>
+        <div class="pct-label">de interés</div>
+        <div class="example">Pedís <b>$1.000</b><br>Devolvés <b>$2.000</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-title" style="margin-top:18px;"><span class="dot">2</span> Si pagás tarde</div>
+
+  <div class="late">
+    <div class="big">
+      <div class="n">5%</div>
+      <div class="u">por día</div>
+    </div>
+    <div class="txt">
+      <h3>⏰ Recargo por mora</h3>
+      <p>Después de la fecha de vencimiento, <b>cada día</b> que pasa se suma un <b>5% del total a pagar</b>.
+      <span class="warn">¡Pagá a tiempo para no pagar de más!</span></p>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="box">
+      <h4>🧮 Ejemplo fácil</h4>
+      <p>Si tenías que devolver <b>$1.000</b> y te atrasás <b>3 días</b>:<br>
+      3 × $50 (el 5%) = <b>$150</b> de recargo.<br>
+      Total a pagar: <b>$1.150</b>.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="tag">Impulso Crédito · Buenos Aires, Argentina</div>
+    <div class="contact">✉ impulso.credito.ars@gmail.com &nbsp;·&nbsp; 💬 WhatsApp +54 9 11 3925-5583</div>
+    <div class="sub">Los intereses y recargos pueden variar según la configuración del prestamista. Consultá antes de firmar.</div>
+  </div>
+
+</div>
+</body>
+</html>
